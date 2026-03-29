@@ -1,0 +1,5 @@
+<%= form_with model: [@book, @review] do |f| %>
+  <%= f.text_area :content %>
+  <%= f.number_field :rating %>
+  <%= f.submit %>
+<% end %>
