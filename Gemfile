@@ -52,6 +52,8 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem 'sqlite3'
 end
 
 group :development do
@@ -66,3 +68,7 @@ group :test do
 end
 
 gem "bcrypt", "~> 3.1"
+
+group :production do
+  gem 'pg'
+end
