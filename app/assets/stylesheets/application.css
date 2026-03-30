@@ -1,10 +1,90 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+/* Reset & base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #2c3e50;
+    padding: 15px;
+}
+
+.navbar a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 30px auto;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    transition: 0.2s;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.button-area {
+    padding: 20px 0;
+}
+
+/* Form */
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Category container */
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Category tag */
+.category-tag {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}

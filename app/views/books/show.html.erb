@@ -1,3 +1,28 @@
-<h1><%= @book.title %></h1>
+<div class="card">
+  <h1><%= @book.title %></h1>
+  <p>Author: <%= @book.author %></p>
+  <div>
+    <h3>Categories</h3>
 
-<%= link_to "Add Review", new_book_review_path(@book) %>
+    <div class="category-container">
+      <% @book.categories.each do |cat| %>
+      <span class="category-tag">
+        <%= cat.name %>
+      </span>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="button-area">
+    <%= link_to "Add Review", new_book_review_path(@book), class: "btn" %>
+  </div>
+</div>
+
+<h2>Reviews</h2>
+
+<% @book.reviews.each do |review| %>
+  <div class="card">
+    <p><%= review.content %></p>
+    <p>Rating: ⭐ <%= review.rating %></p>
+  </div>
+<% end %>

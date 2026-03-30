@@ -1,5 +1,13 @@
-<%= form_with model: [@book, @review] do |f| %>
-  <%= f.text_area :content %>
-  <%= f.number_field :rating %>
-  <%= f.submit %>
-<% end %>
+<div class="card">
+  <%= form_with model: [@book, @review] do |f| %>
+
+    <label>Content</label>
+    <%= f.text_area :content %>
+
+    <label>Rating</label>
+    <%= f.number_field :rating %>
+
+    <%= f.submit "Submit", class: "btn" %>
+
+  <% end %>
+</div>

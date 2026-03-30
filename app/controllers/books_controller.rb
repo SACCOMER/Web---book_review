@@ -5,5 +5,9 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
+    unless @book
+      redirect_to books_path, alert: "Book not found"
+    end
   end
+
 end
