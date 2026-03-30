@@ -1,11 +1,5 @@
 class BooksController < ApplicationController
   def index
-    if Book.count == 0
-      Rails.application.load_tasks
-      Rake::Task['db:migrate'].invoke
-      Rake::Task['db:seed'].invoke
-    end
-
     @books = Book.all
   end
 
