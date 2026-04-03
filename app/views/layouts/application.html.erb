@@ -11,11 +11,30 @@
 <body>
 
 <div class="navbar">
-  <%= link_to "Home", books_path %>
-  <%= link_to "Login", login_path %>
+  <div class="nav-left">
+    <%= link_to "Home", books_path %>
+  </div>
+
+  <div class="nav-right">
+    <% if current_user %>
+      <span class="nav-user">Hello, <%= current_user.username %></span>
+      <%= button_to "Logout", logout_path, method: :delete, class: "btn nav-btn" %>
+    <% else %>
+      <%= link_to "Login", login_path, class: "btn" %>
+      <%= link_to "Sign Up", signup_path, class: "btn" %>
+    <% end %>
+  </div>
 </div>
 
 <div class="container">
+  <% if flash[:notice] %>
+    <p class="flash-notice"><%= flash[:notice] %></p>
+  <% end %>
+
+  <% if flash[:alert] %>
+    <p class="flash-alert"><%= flash[:alert] %></p>
+  <% end %>
+
   <%= yield %>
 </div>
 
