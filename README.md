@@ -52,6 +52,9 @@ The application implements multiple types of relationships:
 
 - Many-to-Many:
     - Book & Category (through Categorization)
+## ER Diagram
+
+![ER Diagram](app/assets/images/ER.png)
 
 ---
 
